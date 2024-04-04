@@ -11,5 +11,8 @@ pip install -r requirements.txt
 ```
 
 ## Run
-
+### examples for question answer
+```bash
+python examples/question_answer.py
+```
 
