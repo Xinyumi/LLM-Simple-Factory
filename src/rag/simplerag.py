@@ -23,7 +23,10 @@ MAX_LENGTH = 4096
 NUM_TITLES = 5
 MAX_SEQ_LEN = 512
 
-with open('config.yaml', 'r') as file:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(current_dir, '..', '..', 'configs', 'config.yaml')
+
+with open('config_path', 'r') as file:
     config = yaml.safe_load(file)
     
 class SentenceTransformer:
@@ -64,7 +67,7 @@ class SimpleRAG:
         self.index = None
         self.documents = None
         self.embeddings = None
-        self.MODEL_PATH = config['model']['address']
+        self.MODEL_PATH = config['embedding_model']['address']
 
     def search_faiss(self, query):
         model = SentenceTransformer(self.MODEL_PATH,  device="cuda:0")
