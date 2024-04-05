@@ -14,9 +14,9 @@ from src.rag.simplerag import SimpleRAG
 from src.inference.llm_inference import LLM
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-config_path = os.path.join(current_dir, '..', '..', 'configs', 'config.yaml')
+config_path = os.path.join(current_dir, '..', 'configs', 'config.yaml')
 
-with open('config.yaml', 'r') as file:
+with open('config_path', 'r') as file:
     config = yaml.safe_load(file)
 
 model_path = config['llm_model']['address']
