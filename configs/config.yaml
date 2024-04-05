@@ -1,0 +1,9 @@
+llm_model:
+  address: /path/to/your/Llama-2-7b-chat-hf
+
+embedding_model:
+  address: /path/to/your/bge
+
+data:
+  test_path: /path/to/your/test.csv
+
